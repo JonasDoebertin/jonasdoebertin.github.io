@@ -1,0 +1,14 @@
+{
+    "name": "dieserjonas/jonasdoebertin.github.io",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Jonas Döbertin",
+            "email": "jonas@doebertin.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "tightenco/jigsaw": "^1.8"
+    }
+}
