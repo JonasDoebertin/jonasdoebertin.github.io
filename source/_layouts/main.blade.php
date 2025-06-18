@@ -11,6 +11,7 @@
         <meta property="og:type" content="{{ $page->type ?? 'website' }}" />
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
+        <meta name="apple-mobile-web-app-title" content="dj.dev" />
 
         @if($page->noindex)
             <meta name="robots" content="noindex, nofollow">
@@ -20,7 +21,12 @@
 
         <link rel="canonical" href="{{ $page->getUrl() }}">
         <link rel="home" href="{{ $page->baseUrl }}">
-        <link rel="icon" href="/favicon.ico">
+
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
 
         <script type="application/ld+json">
             {

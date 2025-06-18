@@ -238,8 +238,8 @@ This very website uses the implementation outlined above, along with a slightly 
 
 If you're curious about the actual setup, feel free to explore the code on GitHub:
 
--  Extended Markdown Parser: [app/Markdown/ExtendedMarkdownParser.php](#)
--  Bootstrap File: [bootstrap.php](#)
--  Syntax Highlighting Theme: [source/_assets/css/_syntax.css](#)
+-  Extended Markdown Parser: [app/Markdown/ExtendedMarkdownParser.php](https://github.com/JonasDoebertin/jonasdoebertin.github.io/blob/main/app/Markdown/ExtendedMarkdownParser.php)
+-  Bootstrap File: [bootstrap.php](https://github.com/JonasDoebertin/jonasdoebertin.github.io/blob/main/bootstrap.php)
+-  Syntax Highlighting Theme: [source/_assets/css/_syntax.css](https://github.com/JonasDoebertin/jonasdoebertin.github.io/blob/main/source/_assets/css/_syntax.css)
 
 It’s all there—ready to be cloned, forked, or just browsed for inspiration.
