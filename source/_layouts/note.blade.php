@@ -9,4 +9,6 @@
 
     @yield('content')
 
+    @include('_partials/about')
+
 @endsection

@@ -1,0 +1,7 @@
+.prose figure {
+    @apply text-center;
+
+    img {
+        @apply mx-auto;
+    }
+}

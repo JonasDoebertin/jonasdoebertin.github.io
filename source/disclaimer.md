@@ -2,6 +2,7 @@
 extends: _layouts.page
 title: Disclaimer
 section: content
+noindex: true
 ---
 
 ## Liability for Contents

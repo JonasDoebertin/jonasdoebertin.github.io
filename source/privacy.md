@@ -2,6 +2,7 @@
 extends: _layouts.page
 title: Privacy Statement & Cookie Notice
 section: content
+noindex: true
 ---
 
 **Good news:** This website does not use any tracking cookies, analytics services, or third-party data collection tools. Your privacy is fully protected.

@@ -7,8 +7,20 @@
             "email": "jonas@doebertin.de"
         }
     ],
-    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
     "require": {
+        "scrivo/highlight.php": "^9.18",
         "tightenco/jigsaw": "^1.8"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
     }
 }

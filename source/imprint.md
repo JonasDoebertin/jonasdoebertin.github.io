@@ -2,6 +2,7 @@
 extends: _layouts.page
 title: Imprint
 section: content
+noindex: true
 ---
 
 Information provided according to Sec. 5 German Telemedia Act (TMG), as well as responsible for contents acc. to Sec. 55, para. 2 German Federal Broadcasting Agreement (RstV):

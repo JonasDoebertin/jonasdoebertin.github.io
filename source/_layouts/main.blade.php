@@ -12,9 +12,37 @@
         <meta property="og:url" content="{{ $page->getUrl() }}"/>
         <meta property="og:description" content="{{ $page->description ?? $page->siteDescription }}" />
 
+        @if($page->noindex)
+            <meta name="robots" content="noindex, nofollow">
+        @else
+            <meta name="robots" content="index, follow">
+        @endif
+
         <link rel="canonical" href="{{ $page->getUrl() }}">
         <link rel="home" href="{{ $page->baseUrl }}">
         <link rel="icon" href="/favicon.ico">
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Jonas Döbertin",
+                "jobTitle": "Development Team Lead",
+                "skills": "Statamic, Laravel, Shopware, Kirby CMS, PHP, TypeScript, Tailwind CSS",
+                "url": "{{ $page->baseUrl }}",
+                "sameAs": [
+                    "https://github.com/JonasDoebertin",
+                    "https://www.threads.com/@dieserjonas",
+                    "https://www.linkedin.com/in/jonas-d%C3%B6bertin/"
+                ],
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "Digital Masters",
+                    "legalName": "Digital Masters GmbH",
+                    "sameAs": "https://digital-masters.de/"
+                }
+            }
+        </script>
 
         @if ($page->production)
             {{-- Insert tracking code here --}}
@@ -28,7 +56,7 @@
 
         @include('_partials.header')
 
-        <main role="main" class="mb-8 lg:mb-16 xl:mb-32 prose md:prose-lg lg:prose-xl prose-zinc prose-a:text-brand">
+        <main role="main" class="mb-16 xl:mb-32 prose md:prose-lg lg:prose-xl prose-zinc prose-a:text-brand">
             @yield('body')
         </main>
 

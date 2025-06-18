@@ -1,0 +1,21 @@
+a[href*="://"]:after,
+a[href^="tel:"]:after,
+a[href^="mailto:"]:after {
+    content: "\A0\21A3";
+}
+
+a {
+    @apply !no-underline;
+
+    &:hover {
+        @apply !underline;
+    }
+}
+
+a.no-decoration {
+    @apply !no-underline;
+
+    &::after {
+        content: '' !important;
+    }
+}

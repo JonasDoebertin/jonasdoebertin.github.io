@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "./_links.css";
+@import "./_prose.css";
+@import "./_syntax.css";
+
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -6,24 +10,4 @@
     --min-h-frame: calc(100vh - var(--spacing) * 16);
 }
 
-a[href*="://"]:after,
-a[href^="tel:"]:after,
-a[href^="mailto:"]:after {
-    content: "\A0\21A3";
-}
 
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-}
-
-a.no-decoration {
-    text-decoration: none !important;
-
-    &::after {
-        content: '' !important;
-    }
-}

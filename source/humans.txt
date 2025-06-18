@@ -1,0 +1,9 @@
+/* TEAM */
+
+Jonas Döbertin
+
+
+/* SITE */
+
+Components: Jigsaw, Tailwind CSS, Vite
+Software: PhpStorm, GitHub
