@@ -6,8 +6,6 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-    --color-brand: #ff4700;
+    --color-brand: oklch(0.6618 0.2562 35.78);
     --min-h-frame: calc(100vh - var(--spacing) * 16);
 }
-
-
