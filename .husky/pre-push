@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+echo "🕵️ Running dependency checks…"
+
+# Run dependency analyser
+echo "➡️ Running Dependency Analyser..."
+vendor/bin/composer-dependency-analyser
+ANALYSER_EXIT_CODE=$?
+
+if [ $ANALYSER_EXIT_CODE -ne 0 ]; then
+    echo "❌ Dependency check failed. Please fix the listed issues before pushing again!"
+    exit 1
+fi
+
+echo "✅ Dependency checks passed!"
+exit 0
