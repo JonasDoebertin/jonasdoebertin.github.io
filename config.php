@@ -1,7 +1,5 @@
 <?php
 
-use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
-
 return [
     'production' => false,
     'baseUrl' => 'http://localhost:8000/',
