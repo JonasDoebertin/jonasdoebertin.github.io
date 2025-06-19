@@ -13,10 +13,12 @@
         }
     },
     "require": {
+        "php": "^8.4",
         "scrivo/highlight.php": "^9.18",
         "tightenco/jigsaw": "^1.8"
     },
     "require-dev": {
+        "rector/rector": "^2.0",
         "roave/security-advisories": "dev-latest"
     },
     "minimum-stability": "stable",

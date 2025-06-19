@@ -1,0 +1,24 @@
+#!/usr/bin/env sh
+
+echo "🕵️ Checking code style on all PHP files…"
+
+# Run Rector
+echo "➡️ Running Rector..."
+vendor/bin/rector process --clear-cache --no-progress-bar
+RECTOR_EXIT_CODE=$?
+
+if [ $RECTOR_EXIT_CODE -ne 0 ]; then
+    echo "❌ Rector failed"
+    exit 1
+fi
+
+# Add all modified files to the git working tree
+MODIFIED_FILES=$(git diff --name-only -- "*.php")
+
+if [ -n "$MODIFIED_FILES" ]; then
+    echo "✨ Adding applied changes to the commit…"
+    echo "$MODIFIED_FILES" | xargs git add
+fi
+
+echo "✅ Code style checks passed!"
+exit 0
