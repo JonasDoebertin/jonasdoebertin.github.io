@@ -11,5 +11,8 @@ return [
             'path' => 'notes',
             'sort' => '-date',
         ],
+        'projects' => [
+            'sort' => 'priority',
+        ],
     ],
 ];
