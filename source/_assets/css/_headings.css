@@ -1,0 +1,15 @@
+:is(h1, h2, h3, h4, h5, h6):not(:is(.no-decor)) {
+    @apply flex items-center;
+    grid-template-columns: auto 1fr;
+    @apply grid-rows-1;
+    @apply gap-x-8;
+
+    &:after {
+        content: " ";
+        @apply block;
+        @apply flex-1;
+        @apply mt-2;
+        @apply h-1;
+        @apply bg-zinc-100;
+    }
+}

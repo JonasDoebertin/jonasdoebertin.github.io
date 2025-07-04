@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./_headings.css";
 @import "./_links.css";
 @import "./_prose.css";
 @import "./_syntax.css";
