@@ -14,6 +14,8 @@
     },
     "require": {
         "php": "^8.4",
+        "illuminate/collections": "^12.19",
+        "illuminate/support": "^12.19",
         "samdark/sitemap": "^2.4",
         "scrivo/highlight.php": "^9.18",
         "tightenco/jigsaw": "^1.8"
