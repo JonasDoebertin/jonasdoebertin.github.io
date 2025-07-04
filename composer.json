@@ -14,10 +14,14 @@
     },
     "require": {
         "php": "^8.4",
+        "illuminate/collections": "^12.19",
+        "illuminate/support": "^12.19",
+        "samdark/sitemap": "^2.4",
         "scrivo/highlight.php": "^9.18",
         "tightenco/jigsaw": "^1.8"
     },
     "require-dev": {
+        "laravel/pint": "^1.22",
         "rector/rector": "^2.0",
         "roave/security-advisories": "dev-latest",
         "shipmonk/composer-dependency-analyser": "^1.8"

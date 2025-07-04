@@ -19,4 +19,53 @@
         </p>
     @endforeach
 
+    <h2>Current Projects</h2>
+
+    @foreach ($projects->where('status', '!=', 'legacy') as $project)
+        <article class="mb-16">
+            <h3 class="!mt-0 no-decor">
+                {{ $project->title }}
+            </h3>
+
+            {!! $project->getContent() !!}
+
+            <nav class="" aria-label="Additional resources for {{ $project->title }}">
+                <ul class="!mt-0 !ps-0">
+                    @foreach ($project->links as $link)
+                        <li class="inline-block !my-0 mr-8 !mb-2 !ps-0">
+                            <a href="{{ $link['url'] }}" target="_blank" rel="noopener noreferrer">{{ $link['title'] }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+            </nav>
+        </article>
+
+    @endforeach
+
+    <h2>Past Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-x-16">
+        @foreach ($projects->where('status', 'legacy') as $project)
+            <article class="mb-16">
+                <h3 class="!mt-0 no-decor">
+                    {{ $project->title }}
+                </h3>
+
+                {!! $project->getContent() !!}
+
+                <nav class="" aria-label="Additional resources for {{ $project->title }}">
+                    <ul class="!mt-0 !ps-0">
+                        @foreach ($project->links as $link)
+                            <li class="inline-block !my-0 mr-8 !mb-2 !ps-0">
+                                <a href="{{ $link['url'] }}" target="_blank" rel="noopener noreferrer">{{ $link['title'] }}</a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </nav>
+            </article>
+
+        @endforeach
+    </div>
+
+
 @endsection

@@ -1,7 +1,5 @@
 <?php
 
-use Spatie\CommonMarkHighlighter\FencedCodeRenderer;
-
 return [
     'production' => false,
     'baseUrl' => 'http://localhost:8000/',
@@ -12,6 +10,9 @@ return [
         'notes' => [
             'path' => 'notes',
             'sort' => '-date',
+        ],
+        'projects' => [
+            'sort' => 'priority',
         ],
     ],
 ];

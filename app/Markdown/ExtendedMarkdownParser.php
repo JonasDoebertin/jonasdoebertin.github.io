@@ -31,7 +31,7 @@ class ExtendedMarkdownParser extends JigsawMarkdownParser
 
         $this->code_class_prefix = 'highlighting language-';
 
-        $this->code_block_content_func = (fn(string $content, string $language): string => $this->highlightFencedCodeBlock($content, $language));
+        $this->code_block_content_func = (fn (string $content, string $language): string => $this->highlightFencedCodeBlock($content, $language));
     }
 
     private function highlightFencedCodeBlock(
@@ -41,7 +41,7 @@ class ExtendedMarkdownParser extends JigsawMarkdownParser
         $content = strtr($content, ["<{{'?php'}}" => '<?php']);
 
         try {
-            if($language !== '' && $language !== '0') {
+            if ($language !== '' && $language !== '0') {
                 return $this->highlighter->highlight($language, $content)->value;
             } else {
                 return $this->highlighter->highlightAuto($content)->value;

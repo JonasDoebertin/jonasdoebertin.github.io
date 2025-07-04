@@ -12,6 +12,16 @@ if [ $RECTOR_EXIT_CODE -ne 0 ]; then
     exit 1
 fi
 
+# Run Pint
+echo "➡️ Running Pint..."
+vendor/bin/pint
+PINT_EXIT_CODE=$?
+
+if [ $PINT_EXIT_CODE -ne 0 ]; then
+    echo "❌ Pint failed"
+    exit 1
+fi
+
 # Add all modified files to the git working tree
 MODIFIED_FILES=$(git diff --name-only -- "*.php")
 
