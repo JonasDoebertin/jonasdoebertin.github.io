@@ -14,7 +14,7 @@
 
     @foreach ($notes as $note)
         <p>
-            <date>{{ date('F jS, Y', $note->date) }}</date><br>
+            <date>{{ date('F Y', $note->date) }}</date><br>
             <a href="{{ $note->getPath() }}/">{{ $note->title }}</a>
         </p>
     @endforeach

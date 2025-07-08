@@ -3,7 +3,7 @@
 @section('body')
 
     <p class="mb-0">
-        <date class="text-grey-light">{{ date('F jS, Y', $page->date) }}</date>
+        <date class="text-grey-light">{{ date('F Y', $page->date) }}</date>
     </p>
     <h1>{{ $page->title }}</h1>
 
