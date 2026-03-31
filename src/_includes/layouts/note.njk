@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+
+<p class="mb-0">
+    <time datetime="{{ date | dateDisplay('YYYY-MM') }}" class="text-zinc-500">{{ date | dateDisplay('MMMM YYYY') }}</time>
+</p>
+<h1>{{ title }}</h1>
+
+{{ content | safe }}
+
+{% include "partials/about.njk" %}

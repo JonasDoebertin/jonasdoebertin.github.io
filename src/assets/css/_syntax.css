@@ -1,0 +1,24 @@
+/**
+ * Syntax highlighting wrapper styles.
+ * Token colors are handled by Shiki via inline styles.
+ */
+
+pre.shiki {
+    @apply rounded-lg overflow-x-auto;
+    padding: 1em;
+}
+
+pre.shiki code {
+    background: transparent;
+}
+
+@media (forced-colors: active) {
+    pre.shiki {
+        background-color: Canvas !important;
+        color: CanvasText !important;
+    }
+
+    pre.shiki span {
+        color: inherit !important;
+    }
+}

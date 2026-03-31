@@ -1,0 +1,58 @@
+{% from "partials/icons/github.njk" import icon as githubIcon %}
+{% from "partials/icons/linkedin.njk" import icon as linkedinIcon %}
+{% from "partials/icons/printables.njk" import icon as printablesIcon %}
+{% from "partials/icons/instagram.njk" import icon as instagramIcon %}
+
+<nav class="mb-8" aria-label="Social Profiles">
+    <h3 class="sr-only">
+        Social Profiles
+    </h3>
+    <ul>
+        <li class="inline-block mr-4">
+            <a href="https://github.com/JonasDoebertin" rel="noreferrer noopener" target="_blank" class="no-decoration text-zinc-800" aria-label="Visit Jonas Döbertins profile page on GitHub">
+                {{ githubIcon("w-8 h-8") }}
+            </a>
+        </li>
+        <li class="inline-block mr-4">
+            <a href="https://www.linkedin.com/in/jonas-d%C3%B6bertin/" rel="noreferrer noopener" target="_blank" class="no-decoration text-zinc-800" aria-label="Visit Jonas Döbertins profile page on LinkedIn">
+                {{ linkedinIcon("w-8 h-8") }}
+            </a>
+        </li>
+        <li class="inline-block mr-4">
+            <a href="https://www.printables.com/@Formiilo" rel="noreferrer noopener" target="_blank" class="no-decoration text-zinc-800" aria-label="Visit Jonas Döbertins 3d printing profile page on Printables">
+                {{ printablesIcon("w-8 h-8") }}
+            </a>
+        </li>
+        <li class="inline-block mr-4">
+            <a href="https://www.instagram.com/n.scale.coffeetable" rel="noreferrer noopener" target="_blank" class="no-decoration text-zinc-800" aria-label="Visit Jonas Döbertins n-scale coffee table layout profile page on Instagram">
+                {{ instagramIcon("w-8 h-8") }}
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<nav aria-label="Legal Information">
+    <h3 class="sr-only">
+        Legal Information
+    </h3>
+
+    <ul>
+        {% if page.url !== "/" %}
+            <li class="block md:inline-block mb-4 md:mr-8">
+                <a href="/" class="no-decoration" aria-label="Go back to the websites home page">
+                    Back to home
+                </a>
+            </li>
+        {% endif %}
+
+        <li class="block md:inline-block mb-4 md:mr-8">
+            <a href="/imprint/" class="no-decoration">Imprint</a>
+        </li>
+        <li class="block md:inline-block mb-4 md:mr-8">
+            <a href="/disclaimer/" class="no-decoration">Disclaimer</a>
+        </li>
+        <li class="block md:inline-block mb-4 md:mr-4">
+            <a href="/privacy/" class="no-decoration">Privacy & Cookie Notice</a>
+        </li>
+    </ul>
+</nav>

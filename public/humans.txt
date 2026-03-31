@@ -1,0 +1,9 @@
+/* TEAM */
+
+Jonas Döbertin
+
+
+/* SITE */
+
+Components: Eleventy, Tailwind CSS, Bun
+Software: PhpStorm, GitHub

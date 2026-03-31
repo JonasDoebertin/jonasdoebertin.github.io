@@ -20,21 +20,16 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.4'
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
-      - name: Install composer dependencies
-        uses: ramsey/composer-install@v3
-        with:
-          composer-options: "--optimize-autoloader"
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
 
-      - name: Install npm dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Build site and assets
-        run: npm run build
+      - name: Build site
+        run: bun run build
+        env:
+          NODE_ENV: production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
@@ -42,7 +37,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build_production'
+          path: './_site'
 
   deploy:
     environment:
