@@ -83,6 +83,8 @@ Now for Pi-hole itself. The key line is `network_mode: service:tailscale`, which
     image: pihole/pihole:latest
     restart: unless-stopped
     network_mode: service:tailscale
+    depends_on:
+      - tailscale
     environment:
       PIHOLE_UID: 99
       PIHOLE_GID: 100
@@ -97,6 +99,8 @@ Now for Pi-hole itself. The key line is `network_mode: service:tailscale`, which
     volumes:
       - /mnt/user/pihole-data:/etc/pihole
 ```
+
+`depends_on` makes sure Docker starts the Tailscale sidecar before Pi-hole. Since Pi-hole shares the sidecar's network stack via `network_mode: service:tailscale`, it can't start properly if the sidecar isn't running yet.
 
 `PIHOLE_UID` and `PIHOLE_GID` set the user and group IDs that Pi-hole runs as inside the container. I'm using `99` and `100` here because that's Unraid's `nobody` user, which is the standard for Docker containers on Unraid. If you're not on Unraid, you can either drop these entirely or set them to match a user on your host system.
 
@@ -197,6 +201,8 @@ services:
     image: pihole/pihole:latest
     restart: unless-stopped
     network_mode: service:tailscale
+    depends_on:
+      - tailscale
     environment:
       PIHOLE_UID: 99
       PIHOLE_GID: 100
