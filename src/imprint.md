@@ -12,4 +12,4 @@ Gudrunstr. 106b
 Germany
 
 Phone: +49 (0) 40 / 3865 0546
-Mail: jonas@doebertin.de
+Mail: imprint@dieserjonas.dev
