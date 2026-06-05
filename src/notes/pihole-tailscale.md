@@ -142,7 +142,7 @@ Test it:
 dig @<your-host-lan-ip> google.com
 ```
 
-If that works, the last step is making it automatic. In your router's settings, find the DHCP configuration and set your server's LAN IP as the DNS server. On a Fritzbox, this is under _Home Network > Network > Network Settings > IPv4 Configuration_. Every device that gets its IP from the router will now automatically use Pi-hole for DNS. No per-device configuration needed.
+If that works, the last step is making it automatic. In your router's settings, find the DHCP configuration and set your server's LAN IP as the DNS server. On a Fritzbox, this is under _Home Network > Network > Network Settings > IPv4 Configuration_. Every device that gets its IP from the router will now automatically use Pi-hole for DNS. You don't have to touch a single device by hand.
 
 ## Seeing hostnames instead of IPs
 
